@@ -1,0 +1,45 @@
+.control {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 0.78rem 0.9rem;
+  color: var(--color-ink);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: border-color 140ms ease, box-shadow 140ms ease;
+}
+.control::placeholder { color: #98a2b3; }
+.control:hover { border-color: #b8c2d4; }
+.control:focus { outline: none; border-color: var(--color-brand); box-shadow: 0 0 0 3px rgba(67, 87, 213, 0.12); }
+.control[aria-invalid="true"] { border-color: var(--color-danger); }
+.select { appearance: auto; }
+.textarea { min-height: 112px; resize: vertical; line-height: 1.5; }
+.checkboxRow { display: flex; align-items: flex-start; gap: 0.7rem; }
+.checkbox {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  margin-top: 3px;
+  accent-color: var(--color-brand);
+}
+.checkboxLabel { color: var(--color-ink); font-size: var(--font-sm); line-height: 1.55; }
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 50px;
+  padding: 0.8rem 1.35rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  color: white;
+  background: var(--color-brand);
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(67, 87, 213, 0.18);
+  transition: background 140ms ease, transform 140ms ease;
+}
+.button:hover:not(:disabled) { background: var(--color-brand-hover); transform: translateY(-1px); }
+.button:active:not(:disabled) { transform: translateY(0); }
+.buttonFull { width: 100%; }
